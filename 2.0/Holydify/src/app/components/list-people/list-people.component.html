@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+    <span>Assistance Management
+    </span>
+ </mat-toolbar>
+
+ <mat-card>
+    <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+		<ng-container matColumnDef="id">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+			<td mat-cell *matCellDef="let element"> {{element.id}} </td>
+		  </ng-container>
+		
+		<ng-container matColumnDef="rol">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> Rol </th>
+			<td mat-cell *matCellDef="let element"> {{element.rol}} </td>
+		  </ng-container>
+
+		  <!-- Name Column -->
+		<ng-container matColumnDef="name">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+			<td mat-cell *matCellDef="let element"> {{element.name}} </td>
+		  </ng-container>
+		
+		  <!-- Weight Column -->
+		<ng-container matColumnDef="mail">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> Mail </th>
+			<td mat-cell *matCellDef="let element"> {{element.mail}} </td>
+		  </ng-container>
+
+		<ng-container matColumnDef="dateout">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> From </th>
+			<td mat-cell *matCellDef="let element"> {{element.datein}} </td>
+		  </ng-container>
+
+		<ng-container matColumnDef="datein">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> To </th>
+			<td mat-cell *matCellDef="let element"> {{element.datein}} </td>
+		  </ng-container>
+		
+		<ng-container matColumnDef="action1">
+			<th mat-header-cell *matHeaderCellDef> </th>
+			<td mat-cell *matCellDef="let element">
+				<mat-icon class="btnOK">check</mat-icon>
+				<mat-icon class="btnEdit">edit</mat-icon>
+				<mat-icon class="btnDelete">delete</mat-icon>
+			</td>
+		  </ng-container>
+
+		
+		  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		</table>
+		<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+
+</mat-card>
+  

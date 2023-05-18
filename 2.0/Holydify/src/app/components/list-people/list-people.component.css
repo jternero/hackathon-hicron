@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+  }
+
+  .btnOK, .btnDelete, .btnEdit {
+    cursor: pointer;
+  }
+
+  .btnOK {
+    color: rgb(20, 121, 77);
+  }
+
+  .btnDelete {
+    color: rgb(121, 20, 20);
+  }
+
+  .btnEdit {
+    color: rgb(20, 20, 121);
+  }
